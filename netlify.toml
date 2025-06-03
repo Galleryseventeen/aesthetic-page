@@ -1,34 +1,38 @@
 [build]
   base = ""
   publish = "out"
-  command = "npm run build"
-  install = "npm install"
+  command = "yarn build"
+  install = "yarn install"
 
 [build.environment]
   NODE_VERSION = "18.16.0"
   CI = false
   NODE_ENV = "production"
+  YARN_VERSION = "1.22.19"
 
 [context.production]
-  command = "npm run build"
+  command = "yarn build"
   environment = {
     NODE_VERSION = "18.16.0",
     CI = false,
-    NODE_ENV = "production"
+    NODE_ENV = "production",
+    YARN_VERSION = "1.22.19"
   }
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "yarn build"
   environment = {
     NODE_VERSION = "18.16.0",
     CI = false,
-    NODE_ENV = "production"
+    NODE_ENV = "production",
+    YARN_VERSION = "1.22.19"
   }
 
 [context.branch-deploy]
-  command = "npm run build"
+  command = "yarn build"
   environment = {
     NODE_VERSION = "18.16.0",
     CI = false,
-    NODE_ENV = "production"
+    NODE_ENV = "production",
+    YARN_VERSION = "1.22.19"
   }

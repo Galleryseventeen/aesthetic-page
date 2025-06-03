@@ -9,8 +9,9 @@
   CI = "false"
   NODE_ENV = "production"
 
-[plugins]
-  - @netlify/plugin-nextjs
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  inputs = {}
 
 [[redirects]]
   from = "/*"

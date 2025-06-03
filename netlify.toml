@@ -1,19 +1,9 @@
 [build]
   base = "/"
   publish = "out"
-  command = "yarn install && yarn build"
+  command = "npm install && npm run build"
 
 [build.environment]
-  NODE_VERSION = "18.16.0"
-  YARN_VERSION = "1.22.19"
+  NODE_VERSION = "16.14.2"
   CI = "false"
   NODE_ENV = "production"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  inputs = {}
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200

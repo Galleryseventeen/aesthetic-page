@@ -1,0 +1,34 @@
+[build]
+  base = ""
+  publish = "out"
+  command = "npm run build"
+  install = "npm install"
+
+[build.environment]
+  NODE_VERSION = "18.16.0"
+  CI = false
+  NODE_ENV = "production"
+
+[context.production]
+  command = "npm run build"
+  environment = {
+    NODE_VERSION = "18.16.0",
+    CI = false,
+    NODE_ENV = "production"
+  }
+
+[context.deploy-preview]
+  command = "npm run build"
+  environment = {
+    NODE_VERSION = "18.16.0",
+    CI = false,
+    NODE_ENV = "production"
+  }
+
+[context.branch-deploy]
+  command = "npm run build"
+  environment = {
+    NODE_VERSION = "18.16.0",
+    CI = false,
+    NODE_ENV = "production"
+  }
